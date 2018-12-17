@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+    Function.prototype.newCall = function(context) {
+	  context.fn = this;  // 通过this获取call的函数
+	  context.fn();
+	  delete context.fn;
+	}
+	let foo = {
+	  value: 1
+	}
+	function bar() {
+	  console.log(this.value);
+	}
+	bar.newCall (foo); // 1
+    </script>
+  </body>
+</html>

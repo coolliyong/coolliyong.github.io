@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>button</button>
+    <script>
+      function ajax() {
+        console.log("ajax");
+      }
+
+      function debounce(fun, delay) {
+        return function(args) {
+          //返回一个新的方法、接受参数
+          let that = this; // 存住当前this ，因为在setTimeout是在window环境
+          const _args = args;
+          clearTimeout(fun.id); //触发方法的时候清除 当前 的定时器、达到防止重复触发的功能
+          fun.id = setTimeout(function() {
+            fun.call(that, _args);
+          }, delay);
+        };
+      }
+
+      var newAjax = debounce(ajax, 1000);
+      document.querySelector("button").addEventListen("click", function(e) {
+        newAjax(200, function() {
+          console.log("ajax_callBack");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>7.this 题目</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var number = 2;
+    var obj = {
+        number: 4,
+        fn1: (function () {
+            this.number *= 2;
+            number = number * 2;
+            var number = 3;
+            return function () {
+                this.number *= 2;
+                number *= 3;
+                console.log(number);
+            }
+        })(),
+        db2: function () {
+            this.number *= 2
+        }
+    };
+    var fn1 = obj.fn1; //window.fn1 = return obj.fn1
+    console.log(number); // window.number =2
+    fn1(); // window.fn1();
+    /**
+     * this.number *= 2;  this => window  : window.number[2] *=2 = 4
+     * var number = 3; //变量提升
+     * number = number * 2;  number 没在this 下 所以是 fn的number 3*2 = 6;
+     * 
+     * 33 alert(number) window.number 4
+     * 
+     * return fn  
+     *  this.number *=2  this.number[4]
+     *  number *= 3  => 6*3 18
+     *  alert(18)
+     */
+
+
+    // obj.fn1();
+    // alert(window.number);
+    // alert(obj.number);
+</script>
+
+</html>
