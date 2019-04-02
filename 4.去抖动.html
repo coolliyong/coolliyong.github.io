@@ -4,15 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>函数防抖/节流</title>
   </head>
   <body>
     <button>button</button>
+    <div id="box" style="width:200px;height:200px;background:#ccc;"></div>
     <script>
       function ajax() {
         console.log("ajax");
       }
-
+      //防抖：在一定时间内只执行一次，当用户触发一次触发后执行
       function debounce(fun, delay) {
         return function(args) {
           //返回一个新的方法、接受参数
@@ -24,13 +25,31 @@
           }, delay);
         };
       }
+      //节流：当用户不断的触发时，仅在N秒内执行一次，多余的屏蔽掉
+      function throttle(fun,wait){
+        var context,prevEventTime = 0; //记录需要执行的上下文，上次执行时间
+        return function(...args){
+          context = this;
+          // 记录第一次执行的时间，如果当前时间 - 第一次执行的时间 >间隔 则执行，否则跳过
+          var now = +new Date();
+          if(now - prevEventTime > wait){
+            fun.call(context,args);
+            prevEventTime = now;
+          }
+        }
+      }
 
       var newAjax = debounce(ajax, 1000);
-      document.querySelector("button").addEventListen("click", function(e) {
+      document.querySelector("button").addEventListener("click", function(e) {
         newAjax(200, function() {
           console.log("ajax_callBack");
         });
       });
+    
+      document.querySelector('#box').onmousemove = throttle(()=>{
+        console.log('move');
+      },3000);
+      
     </script>
   </body>
 </html>
