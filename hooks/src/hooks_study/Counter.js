@@ -6,6 +6,7 @@ const Counter = props => {
 
   return (
     <div>
+      <span>useState</span>
       <article>
         {/* 不要写成count ++ 会报错 count is read-only */}
         <button onClick={() => setCount(count - 1)}>--</button>

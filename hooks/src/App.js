@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import logo from './logo.svg'
+import './App.css'
 import Counter from './hooks_study/Counter'
+import EffectCom from './hooks_study/EffectCom'
 
 class App extends Component {
   render() {
@@ -12,12 +13,13 @@ class App extends Component {
           <p>
            react Hooks 学习
           </p>
-          <span>useState</span>
-          <Counter></Counter>
+          
+          {/* <Counter></Counter> */}
+          <EffectCom />
         </header>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
