@@ -157,6 +157,93 @@ sleep3(3500).then(() => {
 });
 ```
 
+## 箭头函数与普通函数`function`的区别是什么？构造函数`function`可以使用 `new` 生成实例，那么箭头函数可以吗？为什么？
+
+1. 函数体内的 this 对象，就是定义时所在的对象，而不是使用时所在的对象。
+2. 不可以使用 arguments 对象，该对象在函数体内不存在。如果要用，可以用 rest 参数代替。
+3. 不可以使用 yield 命令，因此箭头函数不能用作 Generator 函数。
+4. 不可以使用 new 命令，因为：
+
+   - 没有自己的 this，无法调用 call，apply。
+   - 没有 prototype 属性 ，而 new 命令在执行时需要将构造函数的 prototype 赋值给新的对象的 proto
+
+5. 箭头函数带来的好处
+
+- 没有箭头函数的时候，函数闭包 var that = this 的事没少干，有了箭头函数，就不需要这么写了。
+- IIFE 的时候，当前 this 指向的是全局对象，产生的作用域也是全局，但是箭头函数就不会啦。
+
+---
+
+## `new` 内部干了啥，模拟实现`new`
+
+```javascript
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.say = function() {
+    console.log(`name:${name},age:${age}`);
+  };
+}
+
+const p1 = new Person("test1", 1);
+// console.log(p1.__proto__);
+
+//p1 的 隐士原型指向 Person.prototype
+//p1 的constructor === Person.prototype.constructor
+
+const p2 = newFn(Person, "test2", 2);
+
+//实现
+function newFn(Constructor, ...args) {
+  const obj = Object();
+  // 修改隐士原型
+  obj.__proto__ = Constructor.prototype;
+  // 构造函数 call 实例（新对象） 这样，原本实例化传入的值就挂入 实例（新对象）上了
+  Constructor.call(obj, ...args);
+  return obj;
+}
+
+// 在看一个例子
+function ArrExample() {
+  return [];
+}
+let a = new ArrExample();
+// console.log(a); // [] ??说好的实例呢
+/**
+ *  new 有一个特性 ，如果构造函数返回的是基本类型，就自动处理成返回实例 ，
+ *  如果不是，就不返回实例
+ *  所以咱们的实现也要改一改
+ */
+
+function Person2(name, age) {
+  this.name = name;
+  this.age = age;
+  return {
+    name: "就不返回实例",
+    age: 0.1
+  };
+}
+
+function newFn2(Constructor, ...args) {
+  const obj = new Object();
+  obj.__proto__ = Constructor.prototype;
+  const result = Constructor.call(obj, ...args);
+  return result ? result : obj;
+}
+
+const p3 = newFn2(Person2, "test3", 3);
+// console.log(p3);
+// console.log(Object.getPrototypeOf(p3));
+// p3 {name: "就不返回实例", age: 0.1} 完美
+
+// 记录两个api：
+// https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
+```
+
+- `Object.getPrototypeOf(Person);` // 返回出对象 **__proto__**
+- `Object.setPrototypeOf(Person, Person2);` //设置对象的原型
+
+
 ---
 
 ## React Hooks 学习
