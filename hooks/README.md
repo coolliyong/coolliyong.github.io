@@ -1,13 +1,11 @@
-# React Hooks 学习
-
-#### 动机、解决了什么问题
+### 动机、解决了什么问题
 
 1. `State Hook` 简单来说 组件分为三种、无状态组建可以通过`function` 编写、但是有了 hooks ，可以很轻易的写出带状态的组件
-2. `Effect Hook` 可以让你在函数组件中执行一些具有`effect`（副作用）的操作;每次`render`之后都会执行`effect`相当于`DidMonut` 和 `DidUpdate`,如果需要对指定的参数进行监听,可以在`useEffect`的 参数 2 传入一个 `state`, but 、传入监听参数、也会只当类似`Didmount`的事件
+2. `Effect Hook` 可以让你在函数组件中执行一些具有`effect`（副作用）的操作;每次`render`之后都会执行`effect`相当于`DidMonut` 和 `DidUpdate`,如果需要对指定的参数进行监听,可以在`useEffect`的 参数 2 传入一个 `state`
 
-** 特别注意事项：hooks 是函数，所以 JS 函数有的闭包问题，hooks 中也会发生、所以需要合理规避闭包陷阱 **
+**特别注意事项：hooks 是函数，所以 JS 函数有的闭包问题，hooks 中也会发生、所以需要合理规避闭包陷**
 
-- useState
+## useState
 
 ```javascript
 import React, { useState } from "react";
@@ -30,7 +28,7 @@ const Counter = props => {
 };
 ```
 
-- memo
+## memo
 
 ```javascript
 //哪怕 并没有更新 也会触发子组件重新渲染 所以需要 memo 来缓存
@@ -74,7 +72,7 @@ const Child = memo(props => {
 });
 ```
 
-- useEffect
+## useEffect
 
 ```javascript
 import React, { useState, useEffect } from "react";
@@ -102,7 +100,7 @@ const EffectCom = prop => {
 export default EffectCom;
 ```
 
-- useCallback
+## useCallback
 
 ```javascript
 // 在函数组件中 如果数据变化、会引起数据重新渲染、所以需要使用到 `useCallback` 来解决这种问题
@@ -149,3 +147,7 @@ const EffectCom = prop => {
 
 export default EffectCom;
 ```
+**如果错误、欢迎指出**
+
+
+[示例代码地址](https://github.com/coolliyong/javascript_basic/tree/master/hooks)
