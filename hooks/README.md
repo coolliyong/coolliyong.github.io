@@ -1,68 +1,55 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## React Hooks 学习
 
-## Available Scripts
+#### 动机、解决了什么问题
 
-In the project directory, you can run:
+1. `State Hook` 简单来说 组件分为三种、无状态组建可以通过`function` 编写、但是有了 hooks ，可以很轻易的写出带状态的组件
+2. `Effect Hook` 可以让你在函数组件中执行一些具有`effect`（副作用）的操作;每次`render`之后都会执行`effect`相当于`DidMonut` 和 `DidUpdate`,如果需要对指定的参数进行监听,可以在`useEffect`的 参数2 传入一个 `state`, but 、传入监听参数、也会只当类似`Didmount`的事件
 
-### `npm start`
+- useState
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+import React, { useState } from "react";
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+const Counter = props => {
+  const [count, setCount] = useState(0); // count 状态变量 setCount set函数 useState(0);//使用hooks状态 
+  // 0 count 默认值
+  const [num, setNum] = useState(0);
 
-### `npm test`
+  return (
+    <div>
+      <article>
+        {/* 不能使用count + 1 ，会报错count 是只读 */}
+        <button onClick={() => setCount(count - 1)}>--</button>
+        <span>count:{count}</span>
+        <button onClick={() => setCount(count + 1)}>++</button>
+      </article>
+    </div>
+  );
+};
+```
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- useEffect
 
-### `npm run build`
+```
+import React, { useState,useEffect } from 'react'
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+const EffectCom = prop =>{
+    const [title,setTitle] = useState('defaultTitle');
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+    // 在`DidMount` 和 `DidUpdate` 之后都会执行，如果需要对指定的参数进行监听,可以在`useEffect`的 参数2 传入一个 `state`, but 、传入监听参数、也会只当类似`Didmount`的事件
+    useEffect(eff=>{
+        console.log(eff)
+        document.title = title
+    },title)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    console.log(title)
+    return (<div>
+        <span>Effect Hook</span>
+        <article>
+            <p>title:{title}</p>
+        </article>
+    </div>)
+}
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+export default EffectCom
+```
