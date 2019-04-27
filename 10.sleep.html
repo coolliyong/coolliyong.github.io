@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Sleep</title>
+	<style type="text/css">
+		body {
+			background: #ccc;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>JS模拟实现sleep</h2>
+	<p>这是一个伪命题，无法挂起JS进程，在sleep之后再继续，应该是写一个sleep的异步，通过异步实现</p>
+	<script type="text/javascript">
+		//回调函数实现
+		const sleepCb = (wait,cb)=>setTimeout(cb,wait);
+		sleepCb(5500,()=>{
+			console.log('cb')
+		});
+
+		// promise
+		const sleep = (wait) => new Promise(resolve => setTimeout(resolve, wait));
+		sleep(1500).then(res => {
+			// sleep 之后干的事
+			console.log('sleep');
+		})
+
+		// Generator 基于promise
+		function* sleep2(wait) {
+			yield new Promise(resolve => setTimeout(resolve, wait));
+		};
+		sleep2(2500).next().value.then(() => {
+			console.log('sleep2')
+		})
+
+		// async  基于promise
+		async function sleep3(wait){
+			await new Promise(resolve=>{
+				setTimeout(resolve,wait);
+			})
+		}
+		sleep3(3500).then(()=>{
+			console.log('sleep3');
+		})
+	</script>
+</body>
+
+</html>
