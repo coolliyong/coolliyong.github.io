@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,memo } from "react";
 
 const Counter = props => {
   const [count, setCount] = useState(0);
@@ -7,6 +7,7 @@ const Counter = props => {
   return (
     <div>
       <span>useState</span>
+      <Child name={'child render test'}></Child>
       <article>
         {/* 不要写成count ++ 会报错 count is read-only */}
         <button onClick={() => setCount(count - 1)}>--</button>
@@ -24,3 +25,11 @@ const Counter = props => {
 };
 
 export default Counter;
+
+
+//哪怕 并没有更新 也会触发子组件重新渲染 所以需要 memo 来缓存
+const Child = memo(props=>{
+  console.log('child Render');
+  const [state,setState] = useState(1)
+  return (<div>{props.name}{state}</div>)
+})
