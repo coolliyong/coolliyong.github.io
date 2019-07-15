@@ -2,7 +2,9 @@
 
 ## 浏览器渲染原理
 
-[cssom/domtree 解析过程](/docs/browser/html_css_render.md)
+- [cssom/domtree 解析过程](/docs/browser/html_css_render.md)
+- [rendertree过程、重绘、回流及优化](/docs/browser/rendertree.md)
+- [优化 JavaScript 执行](/docs/browser/optimize_js.md)
 
 ## javascript 基础
 
