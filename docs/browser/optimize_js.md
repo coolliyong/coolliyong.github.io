@@ -1,7 +1,7 @@
 # 优化 JavaScript 执行
 
 > 原文：[优化 JavaScript 执行](https://developers.google.com/web/fundamentals/performance/rendering/optimize-javascript-execution)  
-> 作者: Paul is a Design and Perf Advocate
+> 作者: Paul Lewis
 
 JavaScript 经常会触发视觉变化。有时是直接通过样式操作，有时是会产生视觉变化的计算，例如搜索数据或将其排序。时机不当或长时间运行的 JavaScript 可能是导致性能问题的常见原因。您应当设法尽可能减少其影响。
 
