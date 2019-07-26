@@ -1,14 +1,16 @@
-
 # js Promise 简易实现
 
 promise 特点
+
 - 通过接受一个方法来决定成功或者失败
 - 有一个`then`队列和`catch`队列
 - 可以链式调用
 
-- [x] `Promise.all`
-- [x] `Promise.race`
-- [x] `Promise.finally`
+### 未实现
+
+- ~~Promise.all~~
+- ~~Promise.race~~
+- ~~Promise.finally~~
 
 ```js
 const _status = ['pendding', 'resolve', 'reject']
@@ -88,11 +90,10 @@ class MyPromise {
     return this
   }
 }
-
-
 ```
 
 调用
+
 ```js
 new MyPromise((resolve, reject) => {
   setTimeout(() => {
