@@ -20,6 +20,7 @@
 - [作用域和闭包](/docs/js/scope_closure.md)
 - [函数递归和调用过程](/docs/js/recursion.md)
 - [函数科里化](/docs/js/currying.md)
+- [js Promise 简易实现](/docs/js/promise.md)
 
 ## React Hooks
 
