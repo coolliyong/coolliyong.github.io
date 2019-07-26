@@ -35,7 +35,7 @@
 
 ## Vue源码阅读
 
-- [Vue源码阅读](https://github.com/coolliyong/vue)
+- [Vue源码阅读](https://github.com/coolliyong/vue/blob/dev/README.md)
 
 ## Node
 
