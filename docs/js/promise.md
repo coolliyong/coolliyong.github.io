@@ -12,6 +12,8 @@ promise 特点
 - ~~Promise.race~~
 - ~~Promise.finally~~
 
+### 代码
+
 ```js
 const _status = ['pendding', 'resolve', 'reject']
 
@@ -92,7 +94,7 @@ class MyPromise {
 }
 ```
 
-调用
+### 调用
 
 ```js
 new MyPromise((resolve, reject) => {
@@ -116,8 +118,10 @@ new MyPromise((resolve, reject) => {
   })
 ```
 
-执行结果  
+### 调用执行结果  
+```
 then res1  
 1  
 then res2  
 2
+```
