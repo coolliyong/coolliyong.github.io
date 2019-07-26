@@ -118,10 +118,11 @@ new MyPromise((resolve, reject) => {
   })
 ```
 
-### 调用执行结果  
+### 调用执行结果
+
 ```
-then res1  
-1  
-then res2  
+then res1
+1
+then res2
 2
 ```
