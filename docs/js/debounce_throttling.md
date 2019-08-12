@@ -6,14 +6,14 @@
 ```javascript
 //防抖：在一定时间内只执行一次，当用户触发一次触发后执行
 function debounce(fun, delay) {
-  return function(args) {
-    //返回一个新的方法、接受参数
-    let that = this // 存住当前this ，因为在setTimeout是在window环境
-    const _args = args
-    clearTimeout(fun.id) //触发方法的时候清除 当前 的定时器、达到防止重复触发的功能
-    fun.id = setTimeout(function() {
-      fun.call(that, _args)
-    }, delay)
+ // 存下来当前this
+  const ctx = this
+  let tfn = null
+  return (...arg) => {
+    clearTimeout(tfn)
+    tfn = setTimeout(() => {
+      fn.call(ctx, ...arg)
+    }, wait)
   }
 }
 
