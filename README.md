@@ -37,6 +37,10 @@
 
 - [Vue源码阅读](https://github.com/coolliyong/vue/blob/dev/README.md)
 
+## Vue 实战经验
+
+- [Vue源码阅读](/docs/vue/vue.scrollTop.md)
+
 ## Node
 
 - [koa 入门示例](/docs/node/koa_study.md)
