@@ -1,6 +1,6 @@
 # React 源码阅读笔记1
 
-### `babel`转`JSX`
+### `JSX`转换
 
 - `babel`
 
