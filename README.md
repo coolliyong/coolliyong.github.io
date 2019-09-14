@@ -30,7 +30,7 @@
 
 ## React 源码阅读
 
-- [`babel`转`JSX`](/docs/react/react_sourse_code_read_1.md)
+- [`babel`转换`JSX`过程](/docs/react/react_sourse_code_read_1.md)
 - [`ReactDOM`(未完结)](/docs/react/react_sourse_code_read_2.md)
 
 ## Vue源码阅读
