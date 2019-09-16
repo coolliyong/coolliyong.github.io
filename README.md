@@ -46,3 +46,4 @@
 - [koa 入门示例](/docs/node/koa_study.md)
 - [koa项目搭建](https://github.com/coolliyong/node/blob/master/readme.md)
 - [mysql+sequelize Orm 小示例](/docs/node/sequelize.md)
+- [消息和CMQ](/docs/node/cmq.md)
