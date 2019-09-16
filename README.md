@@ -47,3 +47,4 @@
 - [koa项目搭建](https://github.com/coolliyong/node/blob/master/readme.md)
 - [mysql+sequelize Orm 小示例](/docs/node/sequelize.md)
 - [消息和CMQ](/docs/node/cmq.md)
+- [Redis基础](/docs/node/redis_basic.md)
