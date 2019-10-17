@@ -44,3 +44,4 @@
 - [mysql+sequelize Orm 小示例](/docs/node/sequelize.md)
 - [消息和CMQ](/docs/node/cmq.md)
 - [Redis基础](/docs/node/redis_basic.md)
+- [Nodejs操作RabbitMq快速上手](https://github.com/coolliyong/node_rabbitMQ_mqtutorial/blob/master/README.md)
