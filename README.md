@@ -1,5 +1,8 @@
 # 前端技术博客
 
+## 数据结构和算法
+- [8种常见数据结构](/docs/it/datatype.md)
+
 ## 浏览器渲染原理
 
 - [cssom/domtree 解析过程](/docs/browser/html_css_render.md)
