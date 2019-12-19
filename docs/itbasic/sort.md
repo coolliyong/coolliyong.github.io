@@ -28,9 +28,8 @@ function lineSort(list) {
 2.  第二次遍历结果 12345
 
 ### 弊端
-已经出来了，尽管只需要遍历10次就可以，但是还是要遍历更多次
 
-
+已经出来了，尽管只需要遍历 10 次就可以，但是还是要遍历更多次
 
 ## 选择排序 （线性查找最小值）
 
@@ -44,10 +43,8 @@ function selectSory(list) {
   for (let i = 0; i < list.length; i++) {
     minIdx = i
     for (let j = i; j < list.length; j++) {
-      // 如果当前小于 需要比对的值 且 小于最小值
-      if (list[j] < list[minIdx]) {
-        minIdx = j
-      }
+      // 计算出最小值
+      if (list[j] < list[minIdx]) minIdx = j
     }
     if (i !== minIdx) {
       list[i] = list[minIdx] + list[i]
@@ -56,23 +53,17 @@ function selectSory(list) {
     }
   }
 }
-
-
 ```
 
 ### 过程
 
 1. 找出最小值，换到第一个位置上
 2. 找出最小值，换到第二个位置上
-...
-
+   ...
 
 ### 弊端
+
 查找次数过多，和冒泡排序差不多
-
-
-
-
 
 ## 堆排序
 
