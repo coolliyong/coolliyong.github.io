@@ -24,6 +24,7 @@
 - [函数递归和调用过程](/docs/js/recursion.md)
 - [函数科里化](/docs/js/currying.md)
 - [js Promise 简易实现](/docs/js/promise.md)
+- [es5模拟实现flat数组扁平化](/docs/js/flat.md)
 
 ## React
 
