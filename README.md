@@ -6,7 +6,8 @@
 - [排序算法:*冒泡排序*，*快速排序*,*堆排序*，*选择排序*](/docs/itbasic/sort.md)
 - [查找算法:*简单查找，二分查找*](/docs/itbasic/find.md)
 - [概念:时间复杂度和大 O 表示法](/docs/arithmetic/0.big_o_and_time.md)
-- [JavaScript数组结构和算法之数组](/docs/arithmetic/1.array.md)
+- [JavaScript数据结构和算法之数组](/docs/arithmetic/1.array.md)
+- [JavaScript数据结构和算法之栈](/docs/arithmetic/2.stack.md)
 
 
 
