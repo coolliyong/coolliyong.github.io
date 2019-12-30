@@ -9,6 +9,7 @@
 - [JavaScript数据结构和算法之数组](/docs/arithmetic/1.array.md)
 - [JavaScript数据结构和算法之栈](/docs/arithmetic/2.stack.md)
 - [JavaScript数据结构和算法之队列](/docs/arithmetic/3.queue.md)
+- [JavaScript数据结构和算法之链表](/docs/arithmetic/4.linkedlist.md)
 
 
 
