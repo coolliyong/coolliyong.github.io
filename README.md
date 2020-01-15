@@ -11,7 +11,11 @@
 - [JavaScript数据结构和算法之队列](/docs/arithmetic/3.queue.md)
 - [JavaScript数据结构和算法之链表](/docs/arithmetic/4.linkedlist.md)
 - [JavaScript数据结构和算法之集合](/docs/arithmetic/5.collections.md)
-- [JavaScript数据结构和算法之字典和散列表](/docs/arithmetic/6.dict_hash.md)
+- [JavaScript数据结构和算法之字典和散列表](/docs/arithmetic/6.dict_hash.md)  
+
+
+
+- [JavaScript数据结构和算法 数据结构总结1【数组】【链表】【散列表】【字典】](/docs/arithmetic/7.linear_structure.md)
 
 
 
