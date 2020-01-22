@@ -6,14 +6,15 @@
 - [排序算法:*冒泡排序*，*快速排序*,*堆排序*，*选择排序*](/docs/itbasic/sort.md)
 - [查找算法:*简单查找，二分查找*](/docs/itbasic/find.md)
 - [概念:时间复杂度和大 O 表示法](/docs/arithmetic/0.big_o_and_time.md)
-- [JavaScript数据结构和算法之数组](/docs/arithmetic/1.array.md)
-- [JavaScript数据结构和算法之栈](/docs/arithmetic/2.stack.md)
-- [JavaScript数据结构和算法之队列](/docs/arithmetic/3.queue.md)
-- [JavaScript数据结构和算法之链表](/docs/arithmetic/4.linkedlist.md)
-- [JavaScript数据结构和算法之集合](/docs/arithmetic/5.collections.md)
-- [JavaScript数据结构和算法之字典和散列表](/docs/arithmetic/6.dict_hash.md)  
+- [JavaScript数据结构和算法-数组](/docs/arithmetic/1.array.md)
+- [JavaScript数据结构和算法-栈](/docs/arithmetic/2.stack.md)
+- [JavaScript数据结构和算法-队列](/docs/arithmetic/3.queue.md)
+- [JavaScript数据结构和算法-链表](/docs/arithmetic/4.linkedlist.md)
+- [JavaScript数据结构和算法-集合](/docs/arithmetic/5.collections.md)
+- [JavaScript数据结构和算法-字典和散列表](/docs/arithmetic/6.dict_hash.md)  
+- [JavaScript数据结构和算法-树](/docs/arithmetic/8.tree.md)    
 
-
+---
 
 - [JavaScript数据结构和算法 数据结构总结1【数组】【链表】【散列表】【字典】](/docs/arithmetic/7.linear_structure.md)
 
@@ -47,7 +48,6 @@
 - [`React Hooks`](/docs/react/react_hooks.md)
 - [使用 `VScode` debug `React` 项目](/docs/react/vscode_debug_react.md)
 - [React 生命周期、组件声明、性能优化](/docs/react/life_cycle.md)
-
 - [`babel`转换`JSX`过程](/docs/react/react_sourse_code_read_1.md)
 - [`ReactDOM`(未完结)](/docs/react/react_sourse_code_read_2.md)
 
@@ -65,5 +65,4 @@
 - [消息和 CMQ](/docs/node/cmq.md)
 - [Redis 基础](/docs/node/redis_basic.md)
 - [Nodejs 操作 RabbitMq 快速上手](https://github.com/coolliyong/node_rabbitMQ_mqtutorial/blob/master/README.md)
-
 - [koa 中间件机制和实现](/docs/node/koa_middle.md)
