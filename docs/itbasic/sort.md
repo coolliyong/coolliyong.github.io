@@ -68,3 +68,27 @@ function selectSory(list) {
 ## 堆排序
 
 ## 快速排序
+
+采用分治法 大于的去右边，小于的去左边
+
+```js
+function quickSort(arr = []) {
+  if (arr.length <= 1) {
+    return arr
+  }
+  const [left, right] = [[], []]
+  const flag = arr.shift()
+
+  for (let i = 0; i < arr.length; i++) {
+    // 小于flag在左边
+    if (arr[i] < flag) {
+      left.push(arr[i])
+    } else {
+      // 大于等于在右边
+      right.push(arr[i])
+    }
+  }
+  // 递归再合并
+  return [...quickSort(left), flag, ...quickSort(right)]
+}
+```
