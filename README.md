@@ -61,3 +61,4 @@
 - [Nodejs 操作 RabbitMq 快速上手](https://github.com/coolliyong/node_rabbitMQ_mqtutorial/blob/master/README.md)
 
 - [koa 中间件机制和实现](/docs/node/koa_middle.md)
+- [node-canvas合成营销图片](/docs/node/node_canvas.md)
