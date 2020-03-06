@@ -1,26 +1,22 @@
 # 技术博客
 
-
-
 ## 数据结构和算法
 
 - [8 种常见数据结构](/docs/itbasic/datatype.md)
-- [排序算法:*冒泡排序*，*快速排序*,*堆排序*，*选择排序*](/docs/itbasic/sort.md)
-- [查找算法:*简单查找，二分查找*](/docs/itbasic/find.md)
+- [排序算法:_冒泡排序_，_快速排序_,_堆排序_，_选择排序_](/docs/itbasic/sort.md)
+- [查找算法:_简单查找，二分查找_](/docs/itbasic/find.md)
 - [概念:时间复杂度和大 O 表示法](/docs/arithmetic/0.big_o_and_time.md)
-- [JavaScript数据结构和算法-数组](/docs/arithmetic/1.array.md)
-- [JavaScript数据结构和算法-栈](/docs/arithmetic/2.stack.md)
-- [JavaScript数据结构和算法-队列](/docs/arithmetic/3.queue.md)
-- [JavaScript数据结构和算法-链表](/docs/arithmetic/4.linkedlist.md)
-- [JavaScript数据结构和算法-集合](/docs/arithmetic/5.collections.md)
-- [JavaScript数据结构和算法-字典和散列表](/docs/arithmetic/6.dict_hash.md)  
-- [JavaScript数据结构和算法-树](/docs/arithmetic/8.tree.md)    
+- [JavaScript 数据结构和算法-数组](/docs/arithmetic/1.array.md)
+- [JavaScript 数据结构和算法-栈](/docs/arithmetic/2.stack.md)
+- [JavaScript 数据结构和算法-队列](/docs/arithmetic/3.queue.md)
+- [JavaScript 数据结构和算法-链表](/docs/arithmetic/4.linkedlist.md)
+- [JavaScript 数据结构和算法-集合](/docs/arithmetic/5.collections.md)
+- [JavaScript 数据结构和算法-字典和散列表](/docs/arithmetic/6.dict_hash.md)
+- [JavaScript 数据结构和算法-树](/docs/arithmetic/8.tree.md)
 
 ---
 
-- [JavaScript数据结构和算法 数据结构总结1【数组】【链表】【散列表】【字典】](/docs/arithmetic/7.linear_structure.md)
-
-
+- [JavaScript 数据结构和算法 数据结构总结 1【数组】【链表】【散列表】【字典】](/docs/arithmetic/7.linear_structure.md)
 
 ## 浏览器渲染原理
 
@@ -68,8 +64,9 @@
 - [Redis 基础](/docs/node/redis_basic.md)
 - [Nodejs 操作 RabbitMq 快速上手](https://github.com/coolliyong/node_rabbitMQ_mqtutorial/blob/master/README.md)
 - [koa 中间件机制和实现](/docs/node/koa_middle.md)
-- [node-canvas合成营销图片](/docs/node/node_canvas.md)
+- [node-canvas 合成营销图片](/docs/node/node_canvas.md)
 - [Node + MQ 限流小计](/docs/node/current_limiting.md)
 
 ## devops
-- [解决80%docker起不来的问题](/docs/devops/docker_env_question.md)
+
+- [解决 80%docker 起不来的问题](/docs/devops/docker_env_question.md)
