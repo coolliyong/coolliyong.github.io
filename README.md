@@ -66,6 +66,7 @@
 - [koa 中间件机制和实现](/docs/node/koa_middle.md)
 - [node-canvas 合成营销图片](/docs/node/node_canvas.md)
 - [Node + MQ 限流小计](/docs/node/current_limiting.md)
+- [node.js BFF开发8个月的心路历程](/docs/node/bff_development_record.md)
 
 ## devops
 
