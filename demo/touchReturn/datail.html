@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>滑动返回</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 100vw;
+        overflow: hidden;
+      }
+      #app {
+        transform: translateX(100);
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+      }
+      /* #app {
+        transform: translateX(80px);
+      } */
+      .page {
+        transform: translateX(0);
+      }
+      .left-mask {
+        position: relative;
+        left: -100px;
+        width: 100px;
+        height:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .app-transition {
+        transition: all 0.1s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="page">
+        content
+      </div>
+      <div class="left-mask"></div>
+    </div>
+    <script>
+      //
+      window.onload = () => {
+        const app = document.querySelector('#app');
+        // 屏幕宽度
+        const screenWidth = window.innerWidth;
+
+        // 左侧宽度
+        const leftOffset = 100;
+        // 大于多少返回
+        const returnScale = 0.85;
+
+        // 左侧比例
+        let leftScale = 0;
+
+        // const transObj = document.querySelector('')
+
+        // 滑动开始
+        app.addEventListener('touchstart', () => {
+          console.log('touchstart');
+          // 按下后开启监听启动
+          app.addEventListener('touchmove', listenTouchMove);
+        });
+        
+        // 滑动完成
+        app.addEventListener('touchend', () => {
+          console.log('touchend');
+          // 取消后取消监听
+          app.removeEventListener('touchmove', listenTouchMove);
+          listenTouchCancel();
+        });
+
+        function listenTouchMove(event) {
+          // 可能有多个手指，但是咱们只要第一个
+          const [firstMoveObj] = event.touches;
+          // screenX：触摸目标在屏幕中的x坐标。
+          const { screenX } = firstMoveObj;
+          // 获取屏幕的50宽度， 当滑动到75%时，左边全部被拉出，否则按比例
+          leftScale = screenX / screenWidth;
+
+          // 37.5 / 375 =
+          const left = leftScale > 1 ? leftOffset : leftScale * leftOffset;
+          console.log(
+            'touchmove,screenX',
+            screenX,
+            'leftScale',
+            leftScale,
+            'left',
+            left
+          );
+          app.style.transform = `translateX(${left}px)`;
+          if (leftScale >= returnScale) {
+            // left-mask
+            document.querySelector('.left-mask').innerHTML = '松开返回';
+          } else {
+            document.querySelector('.left-mask').innerHTML = '继续左滑';
+          }
+        }
+
+        // 松开后钩子函数
+        function listenTouchCancel() {
+          console.log('松开', leftScale);
+
+          if (leftScale >= returnScale) {
+            goBack();
+            resetBodyOffset();
+            return;
+          }
+
+          resetBodyOffset();
+        }
+
+        function goBack(pageLevel = 1) {
+          window.history.back(pageLevel);
+        }
+
+        // 还原body位置
+        function resetBodyOffset() {
+          app.classList.add('app-transition');
+          app.style.transform = 'translateX(0px)';
+          leftScale = 0;
+          app.classList.remove('app-transition');
+        }
+      };
+    </script>
+  </body>
+</html>

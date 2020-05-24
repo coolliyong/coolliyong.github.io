@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>点击进入下一页</title>
+  </head>
+  <body>
+    <div app="link" onclick="nextPage()">
+      点击进入下一页
+    </div>
+    <script>
+      function nextPage() {
+        // window.localStorage.
+        window.location.href = './datail.html'
+        // window.history.pushState({page: 1}, '点击返回', 'datail.html');
+      }
+    </script>
+  </body>
+</html>
