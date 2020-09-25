@@ -24,6 +24,9 @@
 - [rendertree 过程、重绘、回流及优化](/docs/browser/rendertree.md)
 - [优化 JavaScript 执行](/docs/browser/optimize_js.md)
 
+## 性能优化
+- [浏览器网站性能分析](/docs/browser/performance.md)
+
 ## javascript 基础
 
 - [call/bind 手写实现](/docs/js/call_bind.md)
