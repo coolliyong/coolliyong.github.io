@@ -1,5 +1,10 @@
 # 技术博客
 
+## 其他
+- [如何打动一面面试官](/docs/other/interViewOne.md)
+
+
+
 ## 数据结构和算法
 
 - [8 种常见数据结构](/docs/itbasic/datatype.md)
