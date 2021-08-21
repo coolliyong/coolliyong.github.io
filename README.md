@@ -62,6 +62,7 @@
 - [Vue2.0 源码阅读(未完结)](https://github.com/coolliyong/vue/blob/dev/README.md)
 - [VUE 页面切换时候 回到顶部](/docs/vue/vue.scrollTop.md)
 - [VUE3.0 响应式机制](/docs/vue/3.vue3.reactivity.md)
+- [这几段代码助你理解Vue3响应式](/docs/vue/vue3.reactive.md)
 
 ## Node
 
