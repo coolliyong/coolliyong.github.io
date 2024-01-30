@@ -1,10 +1,5 @@
 # 技术博客
 
-## 其他
-- [如何打动一面面试官](/docs/other/interViewOne.md)
-
-
-
 ## 数据结构和算法
 
 - [8 种常见数据结构](/docs/itbasic/datatype.md)
@@ -22,6 +17,9 @@
 ---
 
 - [JavaScript 数据结构和算法 数据结构总结 1【数组】【链表】【散列表】【字典】](/docs/arithmetic/7.linear_structure.md)
+
+## 其他
+- [如何打动面试官](/docs/other/interViewOne.md)
 
 ## 浏览器渲染原理
 
@@ -77,6 +75,9 @@
 - [node-canvas 合成营销图片](/docs/node/node_canvas.md)
 - [Node + MQ 限流小计](/docs/node/current_limiting.md)
 - [node.js BFF开发8个月的心路历程](/docs/node/bff_development_record.md)
+
+## Flutter
+- [Flutter对接Android PDA（手持终端）设备硬件](/docs/flutter/flutter_android_pda.md)
 
 ## devops
 
